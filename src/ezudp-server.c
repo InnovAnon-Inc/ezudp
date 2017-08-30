@@ -1,4 +1,3 @@
-/*#include <stdlib.h>*/
 #include <strings.h>
 #include <unistd.h>
 
@@ -10,9 +9,9 @@
 
 #include <restart.h>
 
-#include "ezudp.h"
+#include "ezudp-server.h"
 
-int ezudp (
+int ezudp_server (
    short port, long addr,
    int (*cb) (socket_t, void *), void *cb_args) {
    struct sockaddr_in si_me;
