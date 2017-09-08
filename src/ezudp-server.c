@@ -24,7 +24,7 @@ int ezudp_server (
    si_me.sin_port = htons (port);
    si_me.sin_addr.s_addr = htonl (addr);
 
-   if (bind (s, (struct sockaddr *) &si_me, sizeof (si_me)) == -1) {
+   if (bind (s, (struct sockaddr *) &si_me, (socklen_t) sizeof (si_me)) == -1) {
       r_close (s);
       return -2;
    }
