@@ -9,6 +9,8 @@
 
 #include "ezudp-client.h"
 
+extern int inet_aton(const char *cp, struct in_addr *inp) ;
+
 int ezudp_client (
    short port, const char *addr,
    int (*cb) (socket_t, struct sockaddr_in *, void *), void *cb_args) {
