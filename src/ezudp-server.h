@@ -5,10 +5,12 @@
 extern "C" {
 #endif
 
+#include <stdint.h>
+
 #include "ezudp.h"
 
 int ezudp_server (
-   short port, long addr,
+   uint16_t port, uint32_t addr,
    int (*cb) (socket_t, void *), void *cb_args) ;
 
 #ifdef __cplusplus
