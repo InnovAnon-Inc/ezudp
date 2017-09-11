@@ -5,7 +5,9 @@
 extern "C" {
 #endif
 
-typedef int socket_t;
+#include <glitter.h>
+
+typedef fd_t socket_t;
 
 #ifdef __cplusplus
 }

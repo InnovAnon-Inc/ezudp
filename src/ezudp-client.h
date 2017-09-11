@@ -10,9 +10,14 @@ extern "C" {
 
 #include "ezudp.h"
 
+typedef __attribute__ ((nonull (2), warn_unused_result))
+int (*ezudp_clientcb_t) (socket_t, struct sockaddr_in *restrict, void *)
+
 int ezudp_client (
-   short port, const char *addr,
-   int (*cb) (socket_t, struct sockaddr_in *, void *), void *cb_args) ;
+   short port, const char *restrict addr,
+   ezudp_clientcb_t cb,
+   void *cb_args)
+__attribute__ ((nonnull (2, 3), warn_unused_result)) ;
 
 #ifdef __cplusplus
 }
