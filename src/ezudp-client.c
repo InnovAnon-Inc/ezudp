@@ -2,6 +2,8 @@
 #include <config.h>
 #endif
 
+#define _BSD_SOURCE
+
 #include <strings.h>
 #include <unistd.h>
 #include <arpa/inet.h>
@@ -12,7 +14,7 @@
 
 #include <ezudp-client.h>
 
-extern int inet_aton(const char *cp, struct in_addr *inp) ;
+/*extern int inet_aton(const char *cp, struct in_addr *inp) ;*/
 
 __attribute__ ((nonnull (2, 3), warn_unused_result))
 int ezudp_client (
