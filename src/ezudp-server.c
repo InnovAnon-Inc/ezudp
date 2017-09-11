@@ -2,6 +2,8 @@
 #include <config.h>
 #endif
 
+#define inline __inline__
+
 #include <strings.h>
 #include <unistd.h>
 #include <arpa/inet.h>

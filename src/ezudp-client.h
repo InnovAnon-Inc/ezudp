@@ -5,8 +5,6 @@
 extern "C" {
 #endif
 
-#define inline __inline__
-
 #include <stdint.h>
 
 #include <sys/types.h>
