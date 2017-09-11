@@ -7,3 +7,5 @@ include_HEADERS	= ezudp-client.h ezudp-server.h ezudp.h
 
 #libezudp_client_la_CFLAGS =
 #libezudp_server_la_CFLAGS =
+
+AM_CPPFLAGS = -D__STDC_INT64__
