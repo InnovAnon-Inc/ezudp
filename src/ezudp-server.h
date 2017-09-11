@@ -7,7 +7,7 @@ extern "C" {
 
 #include <stdint.h>
 
-#include "ezudp.h"
+#include <ezudp.h>
 
 typedef __attribute__ ((warn_unused_result))
 int (*ezudp_servercb_t) (socket_t, void *) ;
