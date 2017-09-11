@@ -28,7 +28,10 @@ int ezudp_server (
    si_me.sin_addr.s_addr = htonl (addr);
 
    TODO (type-punned pointers and strict-aliasing ?)
+   #pragma GCC diagnostic push
+   #pragma GCC diagnostic error "-Wstrict-aliasing=3"
    error_check (bind (s, (struct sockaddr *) &si_me, (socklen_t) sizeof (si_me)) == -1) {
+   #pragma GCC diagnostic pop
    #pragma GCC diagnostic push
 	#pragma GCC diagnostic ignored "-Wunused-result"
       r_close (s);
