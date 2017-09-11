@@ -1,15 +1,17 @@
+#if HAVE_CONFIG_H
+#include <config.h>
+#endif
+
 #include <strings.h>
 #include <unistd.h>
-
+#include <arpa/inet.h>
+#include <netinet/in.h>
 #include <sys/types.h>
 #include <sys/socket.h>
 
-#include <arpa/inet.h>
-#include <netinet/in.h>
-
 #include <restart.h>
 
-#include "ezudp-server.h"
+#include <ezudp-server.h>
 
 __attribute__ ((nonnull (3), warn_unused_result))
 int ezudp_server (

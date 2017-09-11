@@ -1,13 +1,16 @@
+#if HAVE_CONFIG_H
+#include <config.h>
+#endif
+
 #include <strings.h>
 #include <unistd.h>
-
 #include <arpa/inet.h>
 #include <netinet/in.h>
 #include <sys/socket.h>
 
 #include <restart.h>
 
-#include "ezudp-client.h"
+#include <ezudp-client.h>
 
 extern int inet_aton(const char *cp, struct in_addr *inp) ;
 
