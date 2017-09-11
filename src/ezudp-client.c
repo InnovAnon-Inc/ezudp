@@ -18,7 +18,7 @@
 
 __attribute__ ((nonnull (2, 3), warn_unused_result))
 int ezudp_client (
-   short port, const char addr[],
+   uint16_t port, const char addr[],
    ezudp_clientcb_t cb,
    void *cb_args) {
    struct sockaddr_in si_other;
