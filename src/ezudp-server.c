@@ -29,7 +29,7 @@ int ezudp_server (
 
    TODO (type-punned pointers and strict-aliasing ?)
    #pragma GCC diagnostic push
-   #pragma GCC diagnostic error "-Wstrict-aliasing=3"
+   #pragma GCC diagnostic error "-Wstrict-aliasing"
    error_check (bind (s, (struct sockaddr *) &si_me, (socklen_t) sizeof (si_me)) == -1) {
    #pragma GCC diagnostic pop
    #pragma GCC diagnostic push
