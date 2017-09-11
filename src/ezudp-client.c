@@ -13,7 +13,7 @@ extern int inet_aton(const char *cp, struct in_addr *inp) ;
 
 __attribute__ ((nonnull (2, 3), warn_unused_result))
 int ezudp_client (
-   short port, const char *restrict addr,
+   short port, const char addr[],
    ezudp_clientcb_t cb,
    void *cb_args) {
    struct sockaddr_in si_other;

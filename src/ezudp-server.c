@@ -25,7 +25,7 @@ int ezudp_server (
    si_me.sin_port = htons (port);
    si_me.sin_addr.s_addr = htonl (addr);
 
-   /* TODO type-punned pointers and strict-aliasing ? */
+   TODO (type-punned pointers and strict-aliasing ?)
    error_check (bind (s, (struct sockaddr *) &si_me, (socklen_t) sizeof (si_me)) == -1) {
    #pragma GCC diagnostic push
 	#pragma GCC diagnostic ignored "-Wunused-result"
