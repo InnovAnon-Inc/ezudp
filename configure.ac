@@ -9,10 +9,13 @@ AC_CONFIG_FILES([
  src/Makefile
 ])
 AC_CONFIG_MACRO_DIR([m4])
-AC_OUTPUT
 
 AC_CHECK_HEADERS([stdint.h strings.h unistd.h])
 AC_CHECK_HEADERS([arpa/inet.h netinet/in.h sys/types.h sys/socket.h])
 AC_CHECK_HEADERS([restart.h glitter.h])
 
 AC_CHECK_LIB([restart],[r_close])
+
+INNOVANON_WARNINGS([])
+
+AC_OUTPUT
