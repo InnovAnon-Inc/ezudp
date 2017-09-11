@@ -11,7 +11,7 @@ extern "C" {
 #include "ezudp.h"
 
 typedef __attribute__ ((nonull (2), warn_unused_result))
-int (*ezudp_clientcb_t) (socket_t, struct sockaddr_in *restrict, void *)
+int (*ezudp_clientcb_t) (socket_t, struct sockaddr_in *restrict, void *) ;
 
 int ezudp_client (
    short port, const char *restrict addr,

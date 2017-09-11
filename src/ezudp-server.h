@@ -10,7 +10,7 @@ extern "C" {
 #include "ezudp.h"
 
 typedef __attribute__ ((warn_unused_result))
-int (*ezudp_servercb_t) (socket_t, void *);
+int (*ezudp_servercb_t) (socket_t, void *) ;
 
 int ezudp_server (
    uint16_t port, uint32_t addr,
