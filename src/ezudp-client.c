@@ -3,7 +3,7 @@
 #endif
 
 #define _BSD_SOURCE
-#define _POSIX_C_SOURCE 200112L
+#define inline __inline__
 
 #include <strings.h>
 #include <unistd.h>
