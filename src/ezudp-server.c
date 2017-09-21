@@ -26,7 +26,10 @@ int ezudp_server (
 
    bzero (&si_me, sizeof (si_me));
    si_me.sin_family = AF_INET;
+	#pragma GCC diagnostic push
+	#pragma GCC diagnostic ignored "-Wtraditional-conversion"
    si_me.sin_port = htons (port);
+	#pragma GCC diagnostic pop
    si_me.sin_addr.s_addr = htonl (addr);
 
    TODO (type-punned pointers and strict-aliasing ?)
