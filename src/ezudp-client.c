@@ -29,10 +29,13 @@ int ezudp_client (
 
    bzero (&si_other, sizeof (si_other));
    si_other.sin_family = AF_INET;
+	#pragma GCC diagnostic push
+	#pragma GCC diagnostic ignored "-Wtraditional-conversion"
    si_other.sin_port = htons (port);
+	#pragma GCC diagnostic pop
 
    error_check (inet_aton (addr, &si_other.sin_addr) == 0) {
-   #pragma GCC diagnostic push
+	#pragma GCC diagnostic push
 	#pragma GCC diagnostic ignored "-Wunused-result"
       r_close (s);
    #pragma GCC diagnostic pop
