@@ -9,6 +9,7 @@ AC_CONFIG_FILES([
  src/Makefile
 ])
 AC_CONFIG_MACRO_DIR([m4])
+AC_CONFIG_SUBDIRS([glitter restart])
 
 AC_CHECK_HEADERS([stdint.h strings.h unistd.h])
 AC_CHECK_HEADERS([arpa/inet.h netinet/in.h sys/types.h sys/socket.h])
