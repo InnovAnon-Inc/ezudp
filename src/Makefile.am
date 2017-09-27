@@ -9,5 +9,5 @@ include_HEADERS	= ezudp-client.h ezudp-server.h ezudp.h
 #libezudp_server_la_CFLAGS =
 
 AM_CPPFLAGS = -D__STDC_INT64__
-AM_CPPFLAGS += -I $(srcdir)/glitter/src
-AM_CPPFLAGS += -I $(srcdir)/restart/src
+AM_CPPFLAGS += -I $(srcdir)/../glitter/src
+AM_CPPFLAGS += -I $(srcdir)/../restart/src
