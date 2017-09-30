@@ -1,10 +1,10 @@
 AM_CPPFLAGS = -D__STDC_INT64__
 
 SUBDIRS = ../glitter
-AM_CPPFLAGS += -I ../glitter/src
+AM_CPPFLAGS += -I $(top_srcdir)/glitter/src
 
 SUBDIRS += ../restart
-AM_CPPFLAGS += -I ../restart/src
+AM_CPPFLAGS += -I $(top_srcdir)/restart/src
 
 lib_LTLIBRARIES =
 include_HEADERS = ezudp.h
