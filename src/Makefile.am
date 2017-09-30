@@ -10,13 +10,11 @@ lib_LTLIBRARIES =
 include_HEADERS = ezudp.h
 bin_PROGRAMS    =
 
-LIBEZUDP_CLIENT_LIBADD = ../restart/src/.libs/librestart.la $(LIBRESTART_LIBADD)
+include Makefile-LIBADD.inc
 
 lib_LTLIBRARIES += libezudp-client.la libezudp-server.la
 libezudp_client_la_LIBADD = $(LIBEZUDP_CLIENT_LIBADD)
 include_HEADERS += ezudp-client.h
-
-LIBEZUDP_SERVER_LIBADD = ../restart/src/.libs/librestart.la $(LIBRESTART_LIBADD)
 
 lib_LTLIBRARIES += libezudp-server.la
 libezudp_server_la_LIBADD = $(LIBEZUDP_SERVER_LIBADD)
