@@ -13,12 +13,13 @@ extern "C" {
 #include <ezudp.h>
 
 typedef __attribute__ ((nonnull (2), warn_unused_result))
-int (*ezudp_clientcb_t) (socket_t, struct sockaddr_in *restrict, void *) ;
+int (*ezudp_clientcb_t) (socket_t, struct sockaddr_in *restrict,
+   void *restrict) ;
 
 int ezudp_client (
-   uint16_t port, const char addr[],
+   uint16_t port, char const addr[],
    ezudp_clientcb_t cb,
-   void *cb_args)
+   void *restrict cb_args)
 __attribute__ ((nonnull (2, 3), warn_unused_result)) ;
 
 #ifdef __cplusplus

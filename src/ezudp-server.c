@@ -18,7 +18,7 @@
 __attribute__ ((nonnull (3), warn_unused_result))
 int ezudp_server (
    uint16_t port, uint32_t addr,
-   ezudp_servercb_t cb, void *cb_args) {
+   ezudp_servercb_t cb, void *restrict cb_args) {
    struct sockaddr_in si_me;
 
    const socket_t s = socket (AF_INET, SOCK_DGRAM, IPPROTO_UDP);

@@ -19,9 +19,9 @@
 
 __attribute__ ((nonnull (2, 3), warn_unused_result))
 int ezudp_client (
-   uint16_t port, const char addr[],
+   uint16_t port, char const addr[],
    ezudp_clientcb_t cb,
-   void *cb_args) {
+   void *restrict cb_args) {
    struct sockaddr_in si_other;
 
    const socket_t s = socket (AF_INET, SOCK_DGRAM, IPPROTO_UDP);

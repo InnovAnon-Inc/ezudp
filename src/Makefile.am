@@ -1,13 +1,23 @@
-lib_LTLIBRARIES = libezudp-client.la libezudp-server.la
-libezudp_client_la_SOURCES = ezudp-client.c
-libezudp_server_la_SOURCES = ezudp-server.c
-libezudp_client_la_LIBADD = -lrestart
-libezudp_server_la_LIBADD = -lrestart
-include_HEADERS	= ezudp-client.h ezudp-server.h ezudp.h
+lib_LTLIBRARIES =
+include_HEADERS = ezudp.h
+bin_PROGRAMS    =
 
-#libezudp_client_la_CFLAGS =
-#libezudp_server_la_CFLAGS =
+LIBEZUDP_CLIENT_LIBADD = ../restart/src/.libs/librestart.la $(LIBRESTART_LIBADD)
+
+lib_LTLIBRARIES += libezudp-client.la libezudp-server.la
+libezudp_client_la_LIBADD = $(LIBEZUDP_CLIENT_LIBADD)
+include_HEADERS += ezudp-client.h
+
+LIBEZUDP_SERVER_LIBADD = ../restart/src/.libs/librestart.la $(LIBRESTART_LIBADD)
+
+lib_LTLIBRARIES += libezudp-server.la
+libezudp_server_la_LIBADD = $(LIBEZUDP_SERVER_LIBADD)
+include_HEADERS += ezudp-server.h
 
 AM_CPPFLAGS = -D__STDC_INT64__
-AM_CPPFLAGS += -I $(srcdir)/../glitter/src
-AM_CPPFLAGS += -I $(srcdir)/../restart/src
+
+SUBDIRS = ../glitter
+AM_CPPFLAGS += -I ../glitter/src
+
+SUBDIRS += ../restart
+AM_CPPFLAGS += -I ../restart/src
