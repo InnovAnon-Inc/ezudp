@@ -12,7 +12,7 @@ bin_PROGRAMS    =
 
 include Makefile-LIBADD.inc
 
-lib_LTLIBRARIES += libezudp-client.la libezudp-server.la
+lib_LTLIBRARIES += libezudp-client.la
 libezudp_client_la_LIBADD = $(LIBEZUDP_CLIENT_LIBADD)
 include_HEADERS += ezudp-client.h
 
