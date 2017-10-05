@@ -5,12 +5,12 @@
 /*#define _BSD_SOURCE*/
 
 #include <strings.h>
+#define _DEFAULT_SOURCE
 #include <unistd.h>
+#undef _DEFAULT_SOURCE
 #include <arpa/inet.h>
 #include <netinet/in.h>
-#define _DEFAULT_SOURCE
 #include <sys/socket.h>
-#undef _DEFAULT_SOURCE
 
 #include <restart.h>
 
