@@ -6,10 +6,10 @@
 
 #include <strings.h>
 #include <unistd.h>
-#define _DEFAULT_SOURCE
 #include <arpa/inet.h>
-#undef _DEFAULT_SOURCE
+#define _DEFAULT_SOURCE
 #include <netinet/in.h>
+#undef _DEFAULT_SOURCE
 #include <sys/socket.h>
 
 #include <restart.h>
