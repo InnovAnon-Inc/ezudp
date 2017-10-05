@@ -3,11 +3,10 @@
 #endif
 
 /*#define _BSD_SOURCE*/
+#define _DEFAULT_SOURCE
 
 #include <strings.h>
-#define _DEFAULT_SOURCE
 #include <unistd.h>
-#undef _DEFAULT_SOURCE
 #include <arpa/inet.h>
 #include <netinet/in.h>
 #include <sys/socket.h>
