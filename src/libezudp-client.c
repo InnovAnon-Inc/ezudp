@@ -6,7 +6,9 @@
 
 #include <strings.h>
 #include <unistd.h>
+#define _DEFAULT_SOURCE
 #include <arpa/inet.h>
+#undef _DEFAULT_SOURCE
 #include <netinet/in.h>
 #include <sys/socket.h>
 
