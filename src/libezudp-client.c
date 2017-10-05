@@ -7,10 +7,10 @@
 #include <strings.h>
 #include <unistd.h>
 #include <arpa/inet.h>
-#define _DEFAULT_SOURCE
 #include <netinet/in.h>
-#undef _DEFAULT_SOURCE
+#define _DEFAULT_SOURCE
 #include <sys/socket.h>
+#undef _DEFAULT_SOURCE
 
 #include <restart.h>
 
