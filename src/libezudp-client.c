@@ -2,8 +2,7 @@
 #include <config.h>
 #endif
 
-#define _BSD_SOURCE
-#define inline __inline__
+/*#define _BSD_SOURCE*/
 
 #include <strings.h>
 #include <unistd.h>
