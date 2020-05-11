@@ -23,6 +23,11 @@ AC_CHECK_HEADERS([restart.h glitter.h])
 
 AC_CHECK_LIB([restart],[r_close])
 
+LIBEZUDP_CLIENT_LIBADD="`PATH=src:$PATH libezudp_client_config --libs`"
+AC_SUBST(LIBEZUDP_CLIENT_LIBADD)
+LIBEZUDP_SERVER_LIBADD="`PATH=src:$PATH libezudp_server_config --libs`"
+AC_SUBST(LIBEZUDP_SERVER_LIBADD)
+
 INNOVANON_WARNINGS([])
 
 AC_OUTPUT

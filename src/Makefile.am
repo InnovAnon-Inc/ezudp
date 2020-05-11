@@ -12,7 +12,8 @@ lib_LTLIBRARIES =
 include_HEADERS = ezudp.h
 bin_PROGRAMS    =
 
-include Makefile-LIBADD.inc
+#include Makefile-LIBADD.inc
+dist_bin_SCRIPTS = libezudp_client_config libezudp_server_config
 
 lib_LTLIBRARIES += libezudp-client.la
 libezudp_client_la_LIBADD = $(LIBEZUDP_CLIENT_LIBADD)
