@@ -11,9 +11,13 @@ static int cb (socket_t s, struct sockaddr_in *restrict cli,
    void *restrict args) {
    char out[] = "Hello, World!";
    char in [1024];
+#ifndef NDEBUG
    puts (out);
+#endif
    error_check (r_write (s, out, sizeof (out)) != sizeof (out)) return -1;
+#ifndef NDEBUG
    puts (out);
+#endif
    error_check (r_read  (s, in,  sizeof (in))  != sizeof (out)) return -2;
    puts (in);
    return 0;
