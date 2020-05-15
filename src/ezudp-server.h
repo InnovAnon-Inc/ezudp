@@ -7,6 +7,11 @@ extern "C" {
 
 #include <stdint.h>
 
+#include <arpa/inet.h>
+#include <netinet/in.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+
 #include <network.h>
 
 typedef __attribute__ ((nonnull (2), warn_unused_result))
