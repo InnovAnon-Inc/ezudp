@@ -2,5 +2,5 @@
 set -eu
 [ $# -eq 1 ]
 [ $1 == --libs ]
-echo -lezudp-client `libezudp-client_config --libs`
+echo -lezudp-client `libezudp_client_config --libs`
 
