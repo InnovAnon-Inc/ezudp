@@ -1,18 +1,9 @@
 AM_CPPFLAGS = -D__STDC_INT64__
 
-#if USE_SUBMODULES
-#SUBDIRS = ../glitter
-#AM_CPPFLAGS += -I $(top_srcdir)/glitter/src
-#
-#SUBDIRS += ../restart
-#AM_CPPFLAGS += -I $(top_srcdir)/restart/src
-#endif
-
 lib_LTLIBRARIES =
-include_HEADERS = ezudp.h
+include_HEADERS =
 bin_PROGRAMS    =
 
-#include Makefile-LIBADD.inc
 dist_bin_SCRIPTS = libezudp_client_config libezudp_server_config
 
 lib_LTLIBRARIES += libezudp-client.la

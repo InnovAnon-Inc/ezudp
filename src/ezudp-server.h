@@ -7,10 +7,11 @@ extern "C" {
 
 #include <stdint.h>
 
-#include <ezudp.h>
+#include <network.h>
 
-typedef __attribute__ ((warn_unused_result))
-int (*ezudp_servercb_t) (socket_t, void *restrict) ;
+typedef __attribute__ ((nonnull (2), warn_unused_result))
+int (*ezudp_servercb_t) (socket_t, struct sockaddr_in *restrict,
+   void *restrict) ;
 
 int ezudp_server (
    uint16_t port, uint32_t addr,
