@@ -4,7 +4,8 @@ lib_LTLIBRARIES =
 include_HEADERS =
 bin_PROGRAMS = ezudp-client-test ezudp-server-test
 
-dist_bin_SCRIPTS = libezudp_client_config libezudp_server_config
+dist_bin_SCRIPTS  = libezudp_client_config   libezudp_server_config
+dist_bin_SCRIPTS += ezudp_client_test_config ezudp_server_test_config
 
 lib_LTLIBRARIES += libezudp-client.la
 libezudp_client_la_LIBADD = @LIBEZUDP_CLIENT_LIBADD@
