@@ -2,7 +2,7 @@ AM_CPPFLAGS = -D__STDC_INT64__
 
 lib_LTLIBRARIES =
 include_HEADERS =
-bin_PROGRAMS = ezudp-client-test ezudp-server-test
+bin_PROGRAMS =
 
 dist_bin_SCRIPTS  = libezudp_client_config   libezudp_server_config
 dist_bin_SCRIPTS += ezudp_client_test_config ezudp_server_test_config
@@ -15,9 +15,11 @@ lib_LTLIBRARIES += libezudp-server.la
 libezudp_server_la_LIBADD = @LIBEZUDP_SERVER_LIBADD@
 include_HEADERS += ezudp-server.h
 
+bin_PROGRAMS += ezudp-client-test
 ezudp_client_test_LDADD = @EZUDP_CLIENT_TEST_LIBADD@
 EXTRA_ezudp_client_test_DEPENDENCIES = libezudp-client.la
 
+bin_PROGRAMS += ezudp-server-test
 ezudp_server_test_LDADD = @EZUDP_SERVER_TEST_LIBADD@
 EXTRA_ezudp_server_test_DEPENDENCIES = libezudp-server.la
 
