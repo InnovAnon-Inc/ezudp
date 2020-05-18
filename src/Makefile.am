@@ -4,22 +4,23 @@ lib_LTLIBRARIES =
 include_HEADERS =
 bin_PROGRAMS =
 
-dist_bin_SCRIPTS  = libezudp_client_config   libezudp_server_config
-dist_bin_SCRIPTS += ezudp_client_test_config ezudp_server_test_config
-
 lib_LTLIBRARIES += libezudp-client.la
-libezudp_client_la_LIBADD = @LIBEZUDP_CLIENT_LIBADD@
+libezudp_client_la_CPPFLAGS = $(NETWORK_CLIENT_CFLAGS) $(RESTART_CFLAGS)
+libezudp_client_la_LIBADD   = $(NETWORK_CLIENT_LIBS)   $(RESTART_LIBS)
 include_HEADERS += ezudp-client.h
-
+ 
 lib_LTLIBRARIES += libezudp-server.la
-libezudp_server_la_LIBADD = @LIBEZUDP_SERVER_LIBADD@
+libezudp_server_la_CPPFLAGS = $(NETWORK_SERVER_CFLAGS) $(RESTART_CFLAGS)
+libezudp_server_la_LIBADD   = $(NETWORK_SERVER_LIBS)   $(RESTART_LIBS)
 include_HEADERS += ezudp-server.h
 
 bin_PROGRAMS += ezudp-client-test
-ezudp_client_test_LDADD = @EZUDP_CLIENT_TEST_LIBADD@
+ezudp_client_test_CPPFLAGS =                $(NETWORK_CFLAGS) $(NETWORK_CLIENT_CFLAGS) $(RESTART_CFLAGS)
+ezudp_client_test_LDADD    = -lezudp-client $(NETWORK_LIBS)   $(NETWORK_CLIENT_LIBS)   $(RESTART_LIBS)
 EXTRA_ezudp_client_test_DEPENDENCIES = libezudp-client.la
 
 bin_PROGRAMS += ezudp-server-test
-ezudp_server_test_LDADD = @EZUDP_SERVER_TEST_LIBADD@
+ezudp_server_test_CPPFLAGS =                $(NETWORK_CFLAGS) $(NETWORK_SERVER_CFLAGS) $(RESTART_CFLAGS)
+ezudp_server_test_LDADD    = -lezudp-server $(NETWORK_LIBS)   $(NETWORK_SERVER_LIBS)   $(RESTART_LIBS)
 EXTRA_ezudp_server_test_DEPENDENCIES = libezudp-server.la
 

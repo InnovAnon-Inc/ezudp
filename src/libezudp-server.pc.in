@@ -1,0 +1,15 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@ 
+includedir=@includedir@
+
+#ezudp_server_utility=ezudp-server-test
+
+Name: @PACKAGE_NAME@ server 
+Description: ezudp server library
+Version: @PACKAGE_VERSION@
+Libs: -L${libdir} -lezudp-server
+Cflags: -I${includedir}
+Requires: glitter libnetwork
+Requires.private: libnetwork-server librestart
+

@@ -1,0 +1,15 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@ 
+includedir=@includedir@
+
+ezudp_client_utility=ezudp-client-test
+
+Name: @PACKAGE_NAME@ client application
+Description: ezudp client library test application
+Version: @PACKAGE_VERSION@
+Libs: -L${libdir} -lezudp-client
+Cflags: -I${includedir}
+Requires: 
+Requires.private: libnetwork libnetwork-client librestart
+
