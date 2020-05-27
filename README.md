@@ -1,12 +1,13 @@
 # ezudp
 EZ UDP
-==========
+----------
+
 opens a UDP socket
 listens on that socket
 relinquishes control to the specified callback
 closes the UDP socket
-
 ----------
+
 [![CircleCI](https://img.shields.io/circleci/build/github/InnovAnon-Inc/ezudp?color=%23FF1100&logo=InnovAnon%2C%20Inc.&logoColor=%23FF1133&style=plastic)](https://circleci.com/gh/InnovAnon-Inc/ezudp)
 [![Repo Size](https://img.shields.io/github/repo-size/InnovAnon-Inc/ezudp?color=%23FF1100&logo=InnovAnon%2C%20Inc.&logoColor=%23FF1133&style=plastic)](https://github.com/InnovAnon-Inc/ezudp)
 [![LoC](https://tokei.rs/b1/github/InnovAnon-Inc/ezudp?category=code)](https://github.com/InnovAnon-Inc/ezudp)
