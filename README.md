@@ -2,10 +2,10 @@
 EZ UDP
 ----------
 
-opens a UDP socket
-listens on that socket
-relinquishes control to the specified callback
-closes the UDP socket
+- opens a UDP socket
+- listens on that socket
+- relinquishes control to the specified callback
+- closes the UDP socket
 ----------
 
 [![CircleCI](https://img.shields.io/circleci/build/github/InnovAnon-Inc/ezudp?color=%23FF1100&logo=InnovAnon%2C%20Inc.&logoColor=%23FF1133&style=plastic)](https://circleci.com/gh/InnovAnon-Inc/ezudp)
